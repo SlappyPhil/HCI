@@ -1,0 +1,90 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List App</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="page-wrapper">
+
+
+  <!-- (1) Todo Item List -->
+
+      <div id = "toDo">
+      	<form id="toDoForm" method="POST" action="#">
+      	
+      		  <input type="text" name="new-todo" id="toDoInput" placeholder="Enter a todo item..." required>
+      		  
+    		</form>
+    		
+    		
+  		
+     		<ul id="todo-items">
+     		
+     		</ul>
+   	</div>
+   	
+   	
+   	 <!-- (2) Doing Item List -->
+   	 
+   	<div id = "doing">
+   		<form id="doingForm" method="POST" action="#">
+   		
+       		<input type="text" name="new-doing" id="doingInput" placeholder="Enter a doing item..." required>
+       		
+      	</form>
+      	
+     		 <ul id="doing-items">
+     		 
+     		 </ul>
+      </div>
+
+
+    <!-- (3) Done Item List -->
+    
+      <div id = "done">
+    	   <form id="doneForm" method="POST" action="#">
+    	  
+        		<input type="text" name="new-done" id="doneInput" placeholder="Enter a done item..." required>
+        		
+     	   </form>
+          <!-- ul id should be done-items -->
+            <ul id="done-items" class="sortable list" draggable="true">
+              <!-- get element by ID, 
+              add more children to it 
+
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>-->
+            </ul>
+       
+      </div>
+
+   </div>
+
+
+  	<!-- Get external .js files -->
+    <script src="db.js"></script>
+    <script src="doingDB.js"></script>
+     <script src="doneDB.js"></script>
+    <script src="app.js"></script>
+
+  <script src="jquery.min.js"></script> 
+    <script src="jquery.sortable.js"></script>
+   
+    <script>
+      $(function() {
+        $('.sortable').sortable();
+      });
+
+      $('.todo-items', 'doing-items', 'done-items').sortable({
+        connectWith: '.page-wrapper'
+      });
+    </script>
+  </body>
+  </html>

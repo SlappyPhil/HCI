@@ -1,0 +1,90 @@
+
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body, html {
+	padding: 0;
+	margin: 0;
+}
+
+li.sortable-placeholder {
+			border: 1px dashed #CCC;
+			background: none;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #545454;
+	background: #F7F7F7;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.itemList
+{
+	curosr:move;
+}
+#page-wrapper {
+  width: 90%;
+  margin: 2.5em auto;
+  background: #FFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+#toDo
+{
+	float:left;
+	margin-right:20px;
+}
+#doing
+{
+	float:left;
+	margin-left:40px;
+}
+#done
+{
+	float:left;
+	margin-left:60px;
+}
+#toDoForm, #doingForm, #doneForm {
+	padding: 0.5em;
+	background: #0088CC;            
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+#toDoInput, #doingInput, #doneInput {
+	width: 100%;
+	padding: 0.5em;
+	font-size: 1em;
+	border-radius: 3px;
+	border: 0;
+}
+
+#todo-items, #doing-items, #done-items {
+	list-style: none;
+	padding: 0.5em 1em;
+	margin: 0;
+}
+
+#todo-items li, #doing-items li, #done-items li{
+	font-size: 0.9em;
+	padding: 0.5em;
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+	margin: 0.5em 0;
+}
+
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
